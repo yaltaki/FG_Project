@@ -19,6 +19,11 @@ class AFG_ProjectCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
 
+	void StartAttackL(); // Light Button
+	void StartAttackM(); // Medium Button
+	void StartAttackH(); // Heavy Button
+	void StartAttackS(); // Skill Button
+
 protected:
 
 	/** Called for side to side input */
@@ -33,6 +38,15 @@ protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
+
+	// Damage Function for Player
+	void TakeDamage(int DamageAmount);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health");
+	int PlayerHealth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health");
+	int PlayerMaxHealth;
 
 
 public:
