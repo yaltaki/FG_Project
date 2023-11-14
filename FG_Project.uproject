@@ -7,7 +7,16 @@
 		{
 			"Name": "FG_Project",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "VRM4U",
+			"Enabled": true
 		}
 	]
 }
