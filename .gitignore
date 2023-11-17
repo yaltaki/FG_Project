@@ -70,5 +70,8 @@ Saved/*
 Intermediate/*
 Plugins/*/Intermediate/*
 
+# Content folder full of models, animations, and materials
+Content/*
+
 # Cache files for the editor to use
 DerivedDataCache/*
